@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Walter & Julieta - Nuestra Boda</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background: url('https://images.squarespace-cdn.com/content/v1/56ad7f20ab2810a4774f6dec/54aa47cc-2e55-4d87-a2d0-d763a7c5836b/lanikuhonua-hawaii-vibrant-ceremony-setup.jpg?format=750w') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      text-shadow: 1px 1px 3px #000;
+    }
+    .container {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 30px;
+      max-width: 800px;
+      margin: 40px auto;
+      border-radius: 15px;
+    }
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3em;
+      text-align: center;
+      animation: fadeInDown 2s ease-in-out;
+    }
+    h2 {
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 2em;
+      margin-bottom: 30px;
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    p, label {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1em;
+      line-height: 1.6em;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    input, select, textarea, button {
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1em;
+    }
+    button {
+      background-color: #f4c542;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .countdown {
+      text-align: center;
+      font-size: 1.5em;
+      margin: 30px 0 10px 0;
+      font-weight: bold;
+    }
+    .clock {
+      text-align: center;
+      font-size: 1.3em;
+      font-weight: bold;
+      background: rgba(255,255,255,0.2);
+      border-radius: 10px;
+      padding: 10px;
+      display: inline-block;
+      margin-top: 10px;
+    }
+    .color-palette span {
+      display: inline-block;
+      padding: 6px 12px;
+      border-radius: 6px;
+      margin: 4px;
+      color: #000;
+      font-weight: bold;
+    }
+    a {
+      color: #f4c542;
+    }
+    #playBtn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: rgba(255,255,255,0.7);
+      color: #000;
+      padding: 10px 15px;
+      border-radius: 30px;
+      font-size: 1em;
+      z-index: 999;
+      cursor: pointer;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div id="playBtn">🎵 Activar música</div>
+  <div class="container">
+    <h1>¡Nos casamos! 💍❤️</h1>
+    <h2>Walter & Julieta</h2>
+
+    <p>Después de años compartiendo amor, aprendizajes, risas y aventuras, ha llegado el momento de celebrar nuestra unión de la manera más significativa: con un viaje inolvidable junto a nuestros seres más queridos. Queremos invitarte a vivir una semana mágica en Hawái, llena de alegría, paisajes soñados, sorpresas, carcajadas y momentos que quedarán grabados en el corazón. 💕🌺</p>
+
+    <p>Será más que una boda... será una experiencia compartida de amor, emoción y felicidad, en un entorno tropical que refleja nuestro amor. 🌴🍾</p>
+
+    <p>📍 <strong>¿Dónde?</strong> En Hawái, del <strong>4 al 13 de enero de 2026</strong>.<br>
+    💒 <strong>La ceremonia:</strong> Sábado <strong>10 de enero</strong>.</p>
+
+    <p>🏨 <strong>Nuestro alojamiento:</strong> Durante esta semana tan especial, estaremos hospedados en el mágico <strong>Four Seasons Resort Maui at Wailea</strong>, un paraíso frente al mar que será el escenario perfecto para compartir risas, cócteles bajo el sol, caminatas al atardecer y momentos que atesoraremos por siempre. Estás invitado(a) a disfrutar con nosotros cada instante de esta experiencia inolvidable. 🌅🍹🌸</p>
+
+    <p>👗 <strong>Vestimenta elegante:</strong></p>
+    <div class="color-palette">
+      <span style="background:#A9A9A9">Gris</span>
+      <span style="background:#FFFFF0">Marfil</span>
+      <span style="background:#FFD700">Dorado</span>
+      <span style="background:#F0E68C">Caqui</span>
+      <span style="background:#DCD0C0">Arena</span>
+      <span style="background:#F5F5DC">Beige</span>
+    </div>
+    <p>Te pedimos con cariño que respetes esta paleta para mantener una armonía visual en esta celebración tan especial. ✨👗🎩</p>
+
+    <p>🧸 La ceremonia será solo para adultos. Agradecemos mucho tu comprensión y cariño. 🕊️</p>
+
+    <div class="countdown">⏳ Faltan...</div>
+    <div class="clock" id="clock">00 días 00:00:00</div>
+
+    <form action="https://formsubmit.co/nuestrabodajyw@gmail.com" method="POST">
+      <label>👤 Nombre completo:</label>
+      <input type="text" name="nombre" required>
+
+      <label>📧 Correo electrónico o número de contacto:</label>
+      <input type="text" name="contacto" placeholder="ej. correo@ejemplo.com o +1234567890">
+
+      <label>✅ ¿Confirmas tu asistencia?</label>
+      <select name="asistencia">
+        <option value="Sí">Sí</option>
+        <option value="No">No</option>
+      </select>
+
+      <label>🛂 ¿Tienes pasaporte?</label>
+      <select name="pasaporte">
+        <option value="Sí">Sí</option>
+        <option value="No">No</option>
+      </select>
+
+      <label>🇺🇸 ¿Tienes visa vigente?</label>
+      <select name="visa">
+        <option value="Sí">Sí</option>
+        <option value="No">No</option>
+      </select>
+
+      <label>📄 ¿Necesitas ayuda con trámites?</label>
+      <select name="ayuda_tramites">
+        <option value="Sí">Sí</option>
+        <option value="No">No</option>
+      </select>
+
+      <label>🧸 ¿Necesitarás niñera durante la ceremonia?</label>
+      <select name="niñera">
+        <option value="Sí">Sí</option>
+        <option value="No">No</option>
+      </select>
+
+      <label>💊 ¿Tienes seguro médico?</label>
+      <select name="seguro_medico">
+        <option value="Sí">Sí</option>
+        <option value="No">No</option>
+      </select>
+
+      <label>🚫 ¿Qué no puedes comer o beber?</label>
+      <textarea name="restricciones"></textarea>
+
+      <label>💌 Mensaje para los novios:</label>
+      <textarea name="mensaje"></textarea>
+
+      <button type="submit"><i class="fas fa-paper-plane"></i> Enviar respuesta</button>
+    </form>
+
+    <p style="text-align:center; margin-top:20px;">
+      📩 ¿Tienes dudas? <a href="mailto:nuestrabodajyw@gmail.com">Escríbenos aquí</a>
+    </p>
+  </div>
+
+  <audio id="bgMusic">
+    <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mpeg">
+    Tu navegador no soporta el audio.
+  </audio>
+
+  <script>
+    const clock = document.getElementById("clock");
+    const targetDate = new Date("2026-01-04T00:00:00").getTime();
+    setInterval(() => {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      clock.innerText = `${days} días ${hours.toString().padStart(2,'0')}:${minutes.toString().padStart(2,'0')}:${seconds.toString().padStart(2,'0')}`;
+    }, 1000);
+
+    const playBtn = document.getElementById('playBtn');
+    const music = document.getElementById('bgMusic');
+    playBtn.addEventListener('click', () => {
+      music.play();
+    });
+  </script>
+</body>
+</html>
